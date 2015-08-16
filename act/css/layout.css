@@ -1,0 +1,98 @@
+html{
+    height: 100%;
+    width: 98%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 98%;
+    width: 98%;
+    margin: 0px;
+    padding: 4px;
+}
+
+.Box {
+    position: relative;
+    float: left;
+    padding: 4px;
+    width: 100%;
+}
+.Box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.Box12 {
+    position: relative;
+    float: left;
+    padding: 4px;
+    width: 100%;
+}
+.Box12:before{
+    content: "";
+    display: block;
+    padding-top: 120%;
+}
+
+.Box05 {
+    position: relative;
+    float: left;
+    padding: 4px;
+    width: 100%;
+}
+.Box05:before{
+    content: "";
+    display: block;
+    padding-top: 50%;
+}
+
+
+
+.Content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+text {
+        pointer-events: none;
+}
+
+.LegendItem {
+    position: absolute;
+    background-color: red;
+}
+
+.ConnectionRect {
+    fill: #F0F0F0;
+    stroke: #004687;
+}
+
+.ConnectionRectHover {
+    fill: #B81D18;
+    stroke: #202020;
+}
+
+.ConnectionRectSelected {
+    fill: #004687;
+    stroke: #B81018;
+}
+
+.ConnectionText {
+    fill: #202020;
+}
+
+.ConnectionTextHover {
+    fill: #F0F0F0;
+}
+
+.ConnectionTextSelected {
+    fill: #F0F0F0;
+}
+.ConnectionLine {
+    stroke: black;
+}

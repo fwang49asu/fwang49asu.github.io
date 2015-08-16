@@ -1,0 +1,231 @@
+@CHARSET "UTF-8";
+/******************** Defaults ********************/
+body, div, table, tr, td, p
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+table
+{
+    border-collapse: collapse;
+}
+body
+{
+    background: #fff;
+}
+div#layout
+{
+    width: 100%;
+    cursor: default;
+}
+div#page
+{
+    width: 1000px;
+    min-height: 400px;
+    
+    margin: 30px auto 50px auto;
+    border: 1px solid #ccc;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 80px;
+    box-shadow: 0 0 24px #bbb;
+    background: #eee;
+
+    color: #666;
+    font-family: NeutraLight, Gill Sans, Sans Serif;
+    font-size: 10pt;
+}
+/******************** Title Section ********************/
+div.title
+{
+    padding: 25px 15px 20px 25px;
+    border-bottom: 1px solid #ddd;
+    border-top-right-radius: 50px;
+    background: #fff;
+
+    color: #666;
+    font-family: NeutraLight;
+    font-size: 10pt;
+}
+div.title span.name
+{
+    display: inline-block;
+    padding: 0 15px 0 10px;
+
+    color: #333;
+    font-family: Georgia, Times New Roman, Serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+div.title span.affiliation
+{
+    display: inline-block;
+    padding: 0 10px;
+}
+div.title a
+{
+    color: #666;
+    text-decoration: none;
+}
+div.title a:hover
+{
+    color: #933;
+    text-decoration: underline;
+}
+/******************** All Subsequent (Non-Title) Sections ********************/
+div.content
+{
+    padding: 20px 40px 0 40px;
+}
+span.email i
+{
+    display: inline-block;
+    overflow: hidden;
+    width: 0px;
+}
+
+/******************** About Section | Contact Info ********************/
+div.aboutSection
+{
+    padding-bottom: 30px;
+    min-height: 200px;
+}
+div.aboutSection td.leftPanel
+{
+    width: 480px;
+    padding: 20px 120px 10px 50px;
+    vertical-align: top;
+
+    color: #333;
+    font-family: NeutraLight;
+    font-size: 12pt;
+    line-height: 1.35em;
+    word-spacing: 1px;
+    letter-spacing: 0px;
+}
+div.aboutSection td.rightPanel
+{
+    width: 220px;
+    padding: 25px 30px 10px 20px;
+    vertical-align: top;
+}
+
+div.aboutSection td.leftPanel p
+{
+    margin-bottom: 1em;
+}
+
+div.aboutSection td.rightPanel span
+{
+    display: block;
+    margin-bottom: 0.2em;
+}
+div.aboutSection td.rightPanel span.info
+{
+    color: #333;
+    font-family: NeutraDemi;
+    font-size: 10pt;
+}
+
+div.aboutSection a
+{
+    color: #333;
+    text-decoration: none;
+}
+div.aboutSection a:hover
+{
+    color: #933;
+    text-decoration: underline;
+}
+/******************** Project Thumbnail | Descriptions ********************/
+div.project
+{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    
+    color: #333;
+    font-family: NeutraLight;
+    font-size: 12pt;
+    line-height: 1.25em;
+}
+div.project td.leftPanel
+{
+    padding: 10px;
+    vertical-align: top;
+}
+div.project td.rightPanel
+{
+    padding: 10px 20px 10px 15px;
+    vertical-align: top;
+}
+div.project div.imgFrame
+{
+    width: 280px;
+    border: 1px solid #999;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 10px #ccc;
+}
+div.project div.imgFrame img
+{
+    width: 280px;
+    display: block;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+div.project p
+{
+    margin-top: 0;
+    margin-bottom: 0.75em;
+}
+div.project p.title
+{
+    font-family: NeutraBold;
+}
+div.project p.footer
+{
+    margin-top: 1em;
+    font-size: 10pt;
+    opacity: 0.5;
+}
+div.project a
+{
+    color: #933;
+    font-family: NeutraDemi;
+    text-decoration: none;
+}
+div.project a:hover
+{
+    color: #933;
+    text-decoration: underline;
+}
+
+/******************** Footer Section ********************/
+div.footerSection
+{
+    width: 850px;
+    height: 40px;
+    padding: 20px 30px 20px 120px;
+    text-align: right;
+    display: table-cell;
+    vertical-align: bottom;
+    color: #999;
+}
+div.footerSection span
+{
+    display: inline-block;
+}
+div.footerSection .info
+{
+    display: none;
+}
+div.footerSection a
+{
+    color: #999;
+    text-decoration: none;
+}
+div.footerSection a:hover
+{
+    color: #933;
+    text-decoration: underline;
+}
