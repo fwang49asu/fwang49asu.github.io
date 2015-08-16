@@ -315,7 +315,7 @@ ChordVis.prototype.drawConnection = function() {
         .on("mouseover", function(d, i) {
             d3.select(this)
                 .attr("class", "ConnectionRectHover");
-            d3.select("#sourceText" + i)
+            d3.select("#connectionSourceText" + i)
                 .attr("class", "ConnectionTextHover");
         })
         .on("mouseout", function(d, i) {
