@@ -79,7 +79,7 @@ $(document).ready(function() {
             centerGroup.append("text")
                         .attr("x", 270)
                         .attr("y", 50)
-                        .text("Where do stduents transfer?")
+                        .text("Where do students transfer?")
                         .attr("text-anchor", "middle")
                         .attr("font-size", "40px")
                         .attr("fill", "#2e2633")
