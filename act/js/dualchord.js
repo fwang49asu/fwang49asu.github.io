@@ -6,6 +6,8 @@ function DualChord(group) {
 
     this.extractMatrix = function() {
         var self = this;
+        STATE.cf["major"+STATE.source+""+STATE.target].filter(null);
+
         var data = STATE.cf["Gender"].top(Infinity);
         var matrix = [];
         var arcValues = [];
@@ -110,6 +112,11 @@ function DualChord(group) {
         this.arcValues_ = arcValues;
         this.links_ = links;
 
+        STATE.cf["major"+STATE.source+""+STATE.target].filter(self.currentSelection == null ? null : function(d) {
+                return d.source == self.currentSelection || d.target == self.currentSelection;
+        });
+        
+
     }
     
     this.width_ = 400;
@@ -180,7 +187,6 @@ function DualChord(group) {
                         refreshParsets();
                     })
                     .on("click", function(a, id) {
-                        console.log(id);
                         self.currentSelection = self.currentSelection == id ? null : id;
                         if(self.currentSelection == null) {
                             self.group_.selectAll(".chord").transition().style("opacity", 1);
@@ -220,7 +226,7 @@ function DualChord(group) {
                                 if(self.currentSelection == null) {
                                     return 1;
                                 }
-                                return self.currentSelection == i ? 1 : 0.1;})
+                                return (self.currentSelection == d.source.id || self.currentSelection == d.target.id) ? 1 : 0.1;})
                             .attr("d", chord);
         chordPath.append("title").text(function(d, i){
             return STATE.majorNames[d.source.id] + " \u2192 " + STATE.majorNames[d.target.id] 
@@ -236,7 +242,7 @@ function DualChord(group) {
                     if(self.currentSelection == null) {
                         return 1;
                     }
-                    return self.currentSelection == i ? 1 : 0.1;})
+                    return (self.currentSelection == d.source.id || self.currentSelection == d.target.id) ? 1 : 0.1;})
                 .select("title").text(function(d, i){
                     return STATE.majorNames[d.source.id] + " \u2192 " + STATE.majorNames[d.target.id] 
                             + ":\n" + d.value + " students "
