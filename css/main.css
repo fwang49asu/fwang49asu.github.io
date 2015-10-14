@@ -168,7 +168,10 @@ div.project div.imgFrame
 }
 div.project div.imgFrame img
 {
-    width: 280px;
+    max-width: 280px;
+    max-heigth: 600px;
+    width: auto;
+    height: auto;
     display: block;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
